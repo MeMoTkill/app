@@ -40,10 +40,10 @@ const Home = ({ id, go, fetchedUser }) => (
       <PromoBanner bannerData={promoBannerProps} />
     </FixedLayout>
 
-		<Group header={<Header mode="secondary">Navigation Example</Header>}>
+		<Group header={<Header mode="secondary">Зарабатывай на просмотре рекламы 🚀</Header>}>
 			<Div>
-				<Button stretched size="l" mode="secondary" onClick={go} data-to="persik">
-					Show me the Persik, please
+				<Button stretched size="l" mode="commerce" onClick={go} data-to="persik">
+					💥 Смотреть рекламу 💥
 				</Button>
 			</Div>
 		</Group>
