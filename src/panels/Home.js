@@ -43,7 +43,7 @@ const Home = ({ id, go, fetchedUser }) => (
 		<Group header={<Header mode="secondary">Зарабатывай на просмотре рекламы 🚀</Header>}>
 			<Div>
 				<Button stretched size="l" mode="commerce" onClick={go} data-to="persik">
-					💥 Смотреть рекламу 💥
+					 Смотреть рекламу 
 				</Button>
 			</Div>
 		</Group>
