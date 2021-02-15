@@ -37,9 +37,9 @@ const Home = ({ id, go, fetchedUser }) => (
 <Tabbar>
       <TabbarItem text="Новости">
       </TabbarItem>
-      <TabbarItem indicator={<Counter size="s" mode="prominent">12</Counter>} text="Сообщения">
+      <TabbarItem text="Сообщения">
       </TabbarItem>
-      <TabbarItem indicator={<Badge mode="prominent" />} text="Клипы">
+      <TabbarItem text="Клипы">
       </TabbarItem>
     </Tabbar>
 
