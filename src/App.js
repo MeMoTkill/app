@@ -50,7 +50,9 @@ const App = () => {
 			setUser(user);
 			setPopout(null);
 
-			await bridge.send('VKWebAppJoinGroup', { 'group_id': 199554488 });
+			/*await bridge.send('VKWebAppJoinGroup', { 'group_id': 199554488 });   это предлагает подписаться на группу*/
+
+			
 		}
 		fetchData();
 	}, []);
