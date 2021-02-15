@@ -10,6 +10,8 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
+import Tabbar from '@vkontakte/vkui/dist/components/Tabbar/Tabbar';
+
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>Example</PanelHeader>
@@ -30,6 +32,20 @@ const Home = ({ id, go, fetchedUser }) => (
 				</Button>
 			</Div>
 		</Group>
+
+
+<Tabbar>
+      <TabbarItem text="Новости">
+        <Icon28NewsfeedOutline />
+      </TabbarItem>
+      <TabbarItem indicator={<Counter size="s" mode="prominent">12</Counter>} text="Сообщения">
+        <Icon28MessageOutline />
+      </TabbarItem>
+      <TabbarItem indicator={<Badge mode="prominent" />} text="Клипы">
+        <Icon28ClipOutline />
+      </TabbarItem>
+    </Tabbar>
+
 	</Panel>
 );
 
