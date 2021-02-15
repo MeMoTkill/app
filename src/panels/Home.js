@@ -30,6 +30,19 @@ const Home = ({ id, go, fetchedUser }) => (
 				</Button>
 			</Div>
 		</Group>
+		
+		 <Tabbar>
+      <TabbarItem text="Новости">
+        <Icon28NewsfeedOutline />
+      </TabbarItem>
+      <TabbarItem indicator={<Counter size="s" mode="prominent">12</Counter>} text="Сообщения">
+        <Icon28MessageOutline />
+      </TabbarItem>
+      <TabbarItem indicator={<Badge mode="prominent" />} text="Клипы">
+        <Icon28ClipOutline />
+      </TabbarItem>
+    </Tabbar>
+
 	</Panel>
 );
 
