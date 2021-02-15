@@ -11,6 +11,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 import Tabbar from '@vkontakte/vkui/dist/components/Tabbar/Tabbar';
+import Tabbar from '@vkontakte/vkui/dist/components/TabbarItem/TabbarItem';
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
