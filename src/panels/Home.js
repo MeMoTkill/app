@@ -11,20 +11,34 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 import Tabbar from '@vkontakte/vkui/dist/components/Tabbar/Tabbar';
-import Tabbar from '@vkontakte/vkui/dist/components/TabbarItem/TabbarItem';
+import TabbarItem from '@vkontakte/vkui/dist/components/TabbarItem/TabbarItem';
+
+import PromoBanner from '@vkontakte/vkui/dist/components/PromoBanner/PromoBanner';
+import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout';
+
+const promoBannerProps = {
+  title: 'CallPrank сервис',
+  domain: 'vk.com/callpranktop',
+  trackingLink: 'https://vk.com/callpranktop',
+  ctaText: 'Перейти',
+  advertisingLabel: 'Реклама',
+  iconLink: 'https://memotkill.github.io/app/img/CallPrank.jpg',
+  description: 'Всего 7 рублей за звонок',
+  ageRestrictions: "18+",
+  statistics: [
+    { url: '', type: 'playbackStarted' },
+    { url: '', type: 'click' }
+  ]
+};
+
+
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader>Example</PanelHeader>
-		{fetchedUser &&
-		<Group header={<Header mode="secondary">User Data Fetched with VK Bridge</Header>}>
-			<Cell
-				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
-				description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
-			>
-				{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
-			</Cell>
-		</Group>}
+		<PanelHeader>AdEarn 💰</PanelHeader>
+<FixedLayout vertical="bottom">
+      <PromoBanner bannerData={promoBannerProps} />
+    </FixedLayout>
 
 		<Group header={<Header mode="secondary">Navigation Example</Header>}>
 			<Div>
