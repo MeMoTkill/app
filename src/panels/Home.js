@@ -50,11 +50,11 @@ const Home = ({ id, go, fetchedUser }) => (
 
 
 <Tabbar>
-      <TabbarItem text="Новости">
+      <TabbarItem text="Рефералы">
       </TabbarItem>
-      <TabbarItem text="Сообщения">
+      <TabbarItem text="Заработать">
       </TabbarItem>
-      <TabbarItem text="Клипы">
+      <TabbarItem text="Выплаты">
       </TabbarItem>
     </Tabbar>
 
