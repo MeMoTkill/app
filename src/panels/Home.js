@@ -16,7 +16,9 @@ import TabbarItem from '@vkontakte/vkui/dist/components/TabbarItem/TabbarItem';
 import PromoBanner from '@vkontakte/vkui/dist/components/PromoBanner/PromoBanner';
 import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout';
 
-const promoBannerProps = {
+import { Icon24Cancel } from '@vkontakte/icons';
+
+/*const promoBannerProps = {
   title: 'CallPrank сервис',
   domain: 'vk.com/callpranktop',
   trackingLink: 'https://vk.com/callpranktop',
@@ -29,16 +31,17 @@ const promoBannerProps = {
     { url: '', type: 'playbackStarted' },
     { url: '', type: 'click' }
   ]
-};
+};*/
 
 
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>AdEarn 💰</PanelHeader>
-<FixedLayout vertical="bottom">
+
+/*<FixedLayout vertical="bottom">
       <PromoBanner bannerData={promoBannerProps} />
-    </FixedLayout>
+    </FixedLayout>*/
 
 		<Group header={<Header mode="secondary">Зарабатывай на просмотре рекламы 🚀</Header>}>
 			<Div>
