@@ -6,6 +6,8 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
 import Persik from './panels/Persik';
+import viplata from './panels/viplata';
+import referals from './panels/referals';
 import PromoBanner from '@vkontakte/vkui/dist/components/PromoBanner/PromoBanner';
 import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout';
 
@@ -50,7 +52,7 @@ const App = () => {
 			setUser(user);
 			setPopout(null);
 
-			/*await bridge.send('VKWebAppJoinGroup', { 'group_id': 199554488 });   это предлагает подписаться на группу*/
+			await bridge.send('VKWebAppJoinGroup', { 'group_id': 202626976 });   это предлагает подписаться на группу
 
 			
 		}
@@ -65,6 +67,8 @@ const App = () => {
 		<View activePanel={activePanel} popout={popout}>
 			<Home id='home' fetchedUser={fetchedUser} go={go} />
 			<Persik id='persik' go={go} />
+			<viplata id='viplata' go={go} />
+			<referals id='referals' go={go} />
 
 			
     

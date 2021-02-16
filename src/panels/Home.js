@@ -43,17 +43,25 @@ const Home = ({ id, go, fetchedUser }) => (
 
       <TabbarItem 
       onClick={go}
-      data-to="persik"
+      data-to="referals"
       text="Рефералы">
       <Icon24Users/>
       </TabbarItem>
 
-      <TabbarItem text="Заработать">
+      <TabbarItem 
+      onClick={go}
+      data-to="persik"
+      text="Заработать">
       <Icon24Coins/>
       </TabbarItem>
-      <TabbarItem text="Выплаты">
+
+      <TabbarItem 
+      onClick={go}
+      data-to="viplata"
+      text="Выплаты">
       <Icon24Link/>
       </TabbarItem>
+
     </Tabbar>
 
 	</Panel>
