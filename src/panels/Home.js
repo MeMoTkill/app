@@ -19,23 +19,50 @@ import { Icon24Coins } from '@vkontakte/icons';// коины
 import { Icon24Link } from '@vkontakte/icons'; // выплаты 
 import { Icon24Users } from '@vkontakte/icons'; //рефералы
 
+import bridge from '@vkontakte/vk-bridge';
 
+import Icon36LogoVk from '@vkontakte/icons/dist/36/logo_vk';
+import Icon28Play from '@vkontakte/icons/dist/28/play';
+import Placeholder from '@vkontakte/vkui/dist/components/Placeholder/Placeholder';
 
 
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
+
 		<PanelHeader>AdEarn 💰</PanelHeader>
 
 
 
 		<Group header={<Header mode="secondary">Зарабатывай на просмотре рекламы 🚀</Header>}>
 
-			<Div>
-				<Button stretched size="l" mode="commerce" onClick={go} data-to="persik">
-					 Смотреть рекламу 
-				</Button>
-			</Div>
+			
+			<Placeholder
+					stretched
+					action={
+						bridge.supports('VKWebAppShowNativeAds') 
+						?
+							<Button
+								before={<Icon28Play />}
+								onClick={() => bridge.send('VKWebAppShowNativeAds', { ad_format: 'preloader' })}
+								size='l'
+								mode='outline'
+							>
+								Посмотреть рекламу
+							</Button>
+						:
+							<Button
+								size='l'
+								mode='outline'
+								disabled
+							>
+								Используйте мобильное приложение
+							</Button>
+					}
+				>
+					Вы можете смотреть рекламу каждые <br /> 3 секунды и моментально <br /> получать VK Coin на свой счёт
+				</Placeholder>
+
 		</Group>
 
 
@@ -50,7 +77,7 @@ const Home = ({ id, go, fetchedUser }) => (
 
       <TabbarItem 
       onClick={go}
-      data-to="persik"
+      data-to="home"
       text="Заработать">
       <Icon24Coins/>
       </TabbarItem>

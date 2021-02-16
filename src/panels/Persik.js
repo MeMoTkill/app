@@ -7,12 +7,12 @@ import PanelHeaderBack from '@vkontakte/vkui/dist/components/PanelHeaderBack/Pan
 
 import bridge from '@vkontakte/vk-bridge';
 
-import persik from '../img/persik.png';
-import './Persik.css';
+
+bridge.send('VKWebAppShowNativeAds', { ad_format: 'preloader' })
 
 const Persik = props => (
 	<Panel id={props.id}>
-	bridge.send('VKWebAppShowNativeAds', { 'preloader' }
+
 		<PanelHeader
 			left={<PanelHeaderBack onClick={props.go} data-to="home"/>}
 		>

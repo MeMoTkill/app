@@ -40,20 +40,17 @@ const App = () => {
 				schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
 				document.body.attributes.setNamedItem(schemeAttribute);
 
-				<FixedLayout vertical="bottom">
-      <PromoBanner bannerData={promoBannerProps} />
-    </FixedLayout>
-
-    
+    	
 			}
 		});
 		async function fetchData() {
-			const user = await bridge.send('VKWebAppGetUserInfo');
-			setUser(user);
-			setPopout(null);
-
 			await bridge.send('VKWebAppJoinGroup', { 'group_id': 202626976 });
 
+			const user = await bridge.send('VKWebAppGetUserInfo');
+			setUser(user);
+
+			setPopout(null);
+			
 			
 		}
 		fetchData();
