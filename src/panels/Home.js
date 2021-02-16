@@ -15,8 +15,9 @@ import TabbarItem from '@vkontakte/vkui/dist/components/TabbarItem/TabbarItem';
 
 
 import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout';
-
-import { Icon24Cancel } from '@vkontakte/icons';
+import { Icon24Coins } from '@vkontakte/icons';// коины
+import { Icon24Link } from '@vkontakte/icons'; // выплаты 
+import { Icon24Users } from '@vkontakte/icons'; //рефералы
 
 
 
@@ -29,6 +30,7 @@ const Home = ({ id, go, fetchedUser }) => (
 
 
 		<Group header={<Header mode="secondary">Зарабатывай на просмотре рекламы 🚀</Header>}>
+
 			<Div>
 				<Button stretched size="l" mode="commerce" onClick={go} data-to="persik">
 					 Смотреть рекламу 
@@ -38,11 +40,19 @@ const Home = ({ id, go, fetchedUser }) => (
 
 
 <Tabbar>
-      <TabbarItem text="Рефералы">
+
+      <TabbarItem 
+      onClick={go}
+      data-to="persik"
+      text="Рефералы">
+      <Icon24Users/>
       </TabbarItem>
+
       <TabbarItem text="Заработать">
+      <Icon24Coins/>
       </TabbarItem>
       <TabbarItem text="Выплаты">
+      <Icon24Link/>
       </TabbarItem>
     </Tabbar>
 
