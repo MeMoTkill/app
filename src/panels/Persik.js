@@ -18,10 +18,10 @@ const Persik = props => (
 		
 		<img className="Persik" src={persik} alt="Persik The Cat"/>
 		
-		bridge.send("VKWebAppShowNativeAds", {ad_format:"preloader"})
+		bridge.send('VKWebAppShowNativeAds', { ad_format: 'preloader' }
          .then(data => console.log(data.result))
         .catch(error => console.log(error));
-		
+
 	</Panel>
 );
 
