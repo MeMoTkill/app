@@ -60,7 +60,7 @@ const Home = ({ id, go, fetchedUser }) => (
 							</Button>
 					}
 				>
-					Баланс: 0
+					Баланс: а я пока не сделал)
 				</Placeholder>
 
 		</Group>
