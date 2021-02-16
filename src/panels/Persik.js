@@ -16,7 +16,7 @@ const Persik = props => (
 		<PanelHeader
 			left={<PanelHeaderBack onClick={props.go} data-to="home"/>}
 		>
-			Persik
+			Реклама
 		</PanelHeader>
 		
 

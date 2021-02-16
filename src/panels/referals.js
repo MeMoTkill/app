@@ -16,7 +16,7 @@ const referals = props => (
 		>
 			Рефералы
 		</PanelHeader>
-		
+		Скоро
 
 		
 		
