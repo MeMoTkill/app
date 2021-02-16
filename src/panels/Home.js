@@ -60,7 +60,7 @@ const Home = ({ id, go, fetchedUser }) => (
 							</Button>
 					}
 				>
-					Вы можете смотреть рекламу каждые <br /> 3 секунды и моментально <br /> получать VK Coin на свой счёт
+					Баланс: 0
 				</Placeholder>
 
 		</Group>
