@@ -23,6 +23,8 @@ import bridge from '@vkontakte/vk-bridge';
 
 import Icon36LogoVk from '@vkontakte/icons/dist/36/logo_vk';
 import Icon28Play from '@vkontakte/icons/dist/28/play';
+import { Icon36Coins } from '@vkontakte/icons';
+
 import Placeholder from '@vkontakte/vkui/dist/components/Placeholder/Placeholder';
 
 
@@ -39,6 +41,7 @@ const Home = ({ id, go, fetchedUser }) => (
 			
 			<Placeholder
 					stretched
+					icon={<Icon36Coins width={56} height={56} style={{ color: 'var(--accent)' }} />}
 					action={
 						bridge.supports('VKWebAppShowNativeAds') 
 						?
