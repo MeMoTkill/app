@@ -8,8 +8,11 @@ import PanelHeaderBack from '@vkontakte/vkui/dist/components/PanelHeaderBack/Pan
 import Tabbar from '@vkontakte/vkui/dist/components/Tabbar/Tabbar';
 import TabbarItem from '@vkontakte/vkui/dist/components/TabbarItem/TabbarItem';
 
+import Button from '@vkontakte/vkui/dist/components/Button/Button';
 
-import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout';
+import { FormLayout, FormLayoutGroup, FormItem, Input, Radio } from '@vkontakte/vkui';
+
+
 import { Icon24Coins } from '@vkontakte/icons';// коины
 import { Icon24Link } from '@vkontakte/icons'; // выплаты 
 import { Icon24Users } from '@vkontakte/icons'; //рефералы
@@ -18,7 +21,7 @@ import { Icon24Users } from '@vkontakte/icons'; //рефералы
 
 
 
-const viplata = props => (
+const Viplata = props => (
 	<Panel id={props.id}>
 
 		<PanelHeader
@@ -27,39 +30,39 @@ const viplata = props => (
 			Выплаты
 		</PanelHeader>
 		
+ <FormLayout>
+              <FormLayoutGroup mode="vertical">
 
-		
-		<Tabbar>
+              <FormItem top="Кошелёк">
+              <Radio name="type">Qiwi</Radio>
+              <Radio name="type">ЮMoney(Яндекс деньги)</Radio>
+            </FormItem>
 
-      <TabbarItem 
-      onClick={go}
-      data-to="referals"
-      text="Рефералы">
-      <Icon24Users/>
-      </TabbarItem>
 
-      <TabbarItem 
-      onClick={go}
-      data-to="home"
-      text="Заработать">
-      <Icon24Coins/>
-      </TabbarItem>
+                <FormItem top="Номер кошелька">
+                  <Input />
+                </FormItem>
+                <FormItem top="Сумма">
+                  <Input />
+                </FormItem>
+              </FormLayoutGroup>
 
-      <TabbarItem 
-      onClick={go}
-      data-to="viplata"
-      text="Выплаты">
-      <Icon24Link/>
-      </TabbarItem>
 
-    </Tabbar>
+ </FormLayout>
+<br />
+<br />
+
+<Button mode="outline">Вывести</Button>
+
+
+<h1>h1</h1>
 
 	</Panel>
 );
 
-viplata.propTypes = {
+Viplata.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 };
 
-export default viplata;
+export default Viplata;

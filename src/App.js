@@ -6,8 +6,8 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
 import Persik from './panels/Persik';
-import viplata from './panels/viplata';
-import referals from './panels/referals';
+import Viplata from './panels/Viplata';
+import Referals from './panels/Referals';
 import PromoBanner from '@vkontakte/vkui/dist/components/PromoBanner/PromoBanner';
 import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout';
 
@@ -59,13 +59,19 @@ const App = () => {
 	const go = e => {
 		setActivePanel(e.currentTarget.dataset.to);
 	};
+	const goo = e => {
+		setActivePanel(e.currentTarget.dataset.to);
+	};
+	const gooo = e => {
+		setActivePanel(e.currentTarget.dataset.to);
+	};
 
 	return (
 		<View activePanel={activePanel} popout={popout}>
 			<Home id='home' fetchedUser={fetchedUser} go={go} />
 			<Persik id='persik' go={go} />
-			<viplata id='viplata' go={go} />
-			<referals id='referals' go={go} />
+			<Viplata id='viplata' go={go} />
+			<Referals id='referals' go={go} />
 
 			
     
