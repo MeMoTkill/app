@@ -47,7 +47,7 @@ const Home = ({ id, go, fetchedUser }) => (
 						?
 							<Button
 								before={<Icon28Play />}
-								onClick={() => bridge.send('VKWebAppShowNativeAds', { ad_format: 'interstitial' })}
+								onClick={() => bridge.send('VKWebAppShowNativeAds', { ad_format: 'reward' })}
 								size='l'
 								mode='outline'
 							>
@@ -63,7 +63,7 @@ const Home = ({ id, go, fetchedUser }) => (
 							</Button>
 					}
 				>
-					Баланс: а я пока не сделsал)
+					Баланс: а я пока не сдеssал)
 				</Placeholder>
 
 		</Group>
