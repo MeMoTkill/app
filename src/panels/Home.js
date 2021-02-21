@@ -15,7 +15,7 @@ import TabbarItem from '@vkontakte/vkui/dist/components/TabbarItem/TabbarItem';
 
 
 import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout';
-import { Icon24Coins } from '@vkontakte/icons';// коины
+import { Icon24Coins } from '@vkontakte/icons';// коин
 import { Icon24Link } from '@vkontakte/icons'; // выплаты 
 import { Icon24Users } from '@vkontakte/icons'; //рефералы
 
@@ -63,7 +63,7 @@ const Home = ({ id, go, fetchedUser }) => (
 							</Button>
 					}
 				>
-					Баланс: а я пока не сделал)
+					Баланс: а я пока не сделsал)
 				</Placeholder>
 
 		</Group>
