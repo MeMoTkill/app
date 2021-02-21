@@ -47,7 +47,7 @@ const Home = ({ id, go, fetchedUser }) => (
 						?
 							<Button
 								before={<Icon28Play />}
-								onClick={() => bridge.send('VKWebAppShowNativeAds', { ad_format: 'reward' })}
+								onClick={() => bridge.send('VKWebAppShowNativeAds', { ad_format: 'interstitial' })}
 								size='l'
 								mode='outline'
 							>
